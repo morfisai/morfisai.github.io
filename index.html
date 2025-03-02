@@ -203,15 +203,15 @@
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into free-viewpoint portraits.
       </h2>
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="comparison" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/tables_animation.mp4" type="video/mp4">
       </video>
     </div>
   </div>
 </section>
 <script>
-  document.getElementById('teaser').playbackRate = 0.8;
-  document.getElementById('teaser').addEventListener('ended', function() {
+  document.getElementById('comparison').playbackRate = 0.8;
+  document.getElementById('comparison').addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
   }, false);
