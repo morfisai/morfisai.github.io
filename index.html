@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Morfis, a software platform for AI-Assisted Physical Product Customization.">
+  <meta name="keywords" content="Morfis, Morfis.ai">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Morfis</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,7 +20,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  </script> -->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -79,11 +79,11 @@
           <h2 class="title is-3">AI-Assisted Physical Product Customization</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Dimitrios Mallis</a>,</span>
+              <a href="https://dimitrismallis.github.io/">Dimitrios Mallis</a>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Anis Kacem</a>,</span>
+              <a href="https://www.linkedin.com/in/aniskacem/">Anis Kacem</a>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Djamila Aouada</a>.
+              <a href="https://daouada.github.io">Djamila Aouada</a>.
             </span>
             <!-- <span class="author-block">
               <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
@@ -137,9 +137,7 @@
         </br>
       </br> 
         </div>
-        <h2 class="title is-3">See <span class="dnerf">Morfis</span> in Action</h2>
 
-        <h3 class="subtitle has-text-centered">Our method allows free form interaction with the design.</h3>
       </div>
     </div>
 
@@ -147,6 +145,16 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <h2 class="title is-3 has-text-centered">See <span class="dnerf">Morfis</span> in Action</h2>
+              </div>
+            </div>
+          <div class="content has-text-justified">
+              <p class="has-text-centered">
+                The software allows text-based product customization of real world objects designs. In the following example the user is able to customize a coffee-table design via language prompts.
+              </p>
+          </div>
           <!-- 3D-effect container specifically for the video -->
           <div class="video-container">
             <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -155,8 +163,8 @@
           </div>
           <!-- Text remains outside the 3D container -->
           <h2 class="subtitle has-text-centered">
-            </br>
-            <span class="dnerf">Morfis</span> text-based product customization.
+            <div style="height: 15px;"></div>
+            <span class="dnerf">Morfis</span> for product customization via text prompts.
           </h2>
         </div>
       </div>
@@ -196,19 +204,47 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
 
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into free-viewpoint portraits.
-      </h2>
-      <video id="comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/tables_rotating.mp4" type="video/mp4">
+<section class="hero teaser" style="position: relative;">
+  <div class="container is-max-desktop" style="position: relative;">
+    <div class="hero-body" style="position: relative;">
+
+      <!-- Heading (absolutely positioned on top) -->
+      <h3 class="title is-4"
+      >
+        Generated coffee-table design customization.
+      </h3>
+
+      <!-- Text content (also absolutely positioned if you want it close or overlapping) -->
+      <div class="content has-text-justified"
+      >
+        <p>
+          The customized design is exported as a step file and can be used within a manifactuing pipeline.
+        </p>
+      </div>
+
+      <!-- Video (behind the text, with lower z-index) -->
+      <video id="comparison"
+             autoplay
+             muted
+             loop
+             playsinline
+             height="100%"
+             style="
+               position: relative;
+               z-index: 1;
+               width: 100%;
+               height: auto;
+               /* you can also use something like min-height or max-height if needed */
+             "
+      >
+        <source src="./static/videos/tables_rotating_croped.mp4" type="video/mp4">
       </video>
+
     </div>
   </div>
 </section>
+
 <script>
   document.getElementById('comparison').playbackRate = 0.8;
   document.getElementById('comparison').addEventListener('ended', function() {
@@ -216,6 +252,64 @@
     this.play();
   }, false);
 </script>
+
+<style>
+  .video-border {
+    border: 1px solid #000; /* Black border */
+    border-radius: 4px;     /* Optional: slightly rounded corners */
+  }
+</style>
+
+<section class="section" style="background-color: rgb(236, 236, 236);">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered is-vcentered is-variable is-8">
+      <!-- Left column (larger). -->
+      <div class="column is-two-thirds">
+        <div class="content">
+          <h2 class="title is-3">
+            Novel Product Design with <span class="dnerf">Morfis</span>
+          </h2>
+          <p>
+            Further to product customization, <span class="dnerf">Morfis</span> can be used
+            to generate product designs from scratch. On this example we design a nameplate
+            with the word CVPR engraved on its center.
+          </p>
+          <div class="video-container">
+            <video id="dollyzoom" 
+                   autoplay muted loop playsinline
+                   style="
+                     width: 100%;
+                     display: block;
+                     clip-path: inset(0 5px 5px 0);
+                     position: relative;
+                   ">
+              <source src="./static/videos/nameplate_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column (smaller) with two stacked videos, positioned lower. -->
+      <div class="column is-one-third" style="margin-left: 3rem; margin-top: 7rem;">
+        <div class="content">
+          <video id="matting-video"  autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/nameplate_animation.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Generated nameplate design.</p>
+      
+          <video id="second-video" class="video-border" autoplay muted loop playsinline height="100%" style="margin-top: 5rem;">
+            <source src="./static/videos/print_first.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Generated Designs can be 3D printed.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
@@ -233,8 +327,14 @@
 
         <div class="content has-text-justified">
           <p>
-            This work is part of our recent research on AI-Assisted Product Customization.
+            The <span class="dnerf">Morfis</span> project is related to our work on generic CAD agents.
+            Refer to our paper <a href="https://arxiv.org/pdf/2412.13810">CAD-Assistant: Tool-Augmented VLLMs as Generic CAD Task Solvers? </a> presenting a general-purpose CAD
+            agent based on a Vision and Large Language Model (VLLM) planner and a
+             tool-augmentation paradigm using CADspecific modules.
           </p>
+        </br>
+      </br>
+    </br>
         </div>
       </div>
     </div>
