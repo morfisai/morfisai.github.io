@@ -260,6 +260,7 @@
   }
 </style>
 
+
 <section class="section" style="background-color: rgb(236, 236, 236);">
   <div class="container is-max-desktop">
     <div class="columns is-centered is-vcentered is-variable is-8">
@@ -290,26 +291,55 @@
       </div>
 
       <!-- Right column (smaller) with two stacked videos, positioned lower. -->
-      <div class="column is-one-third" style="margin-left: 3rem; margin-top: 7rem;">
+      <div class="column is-one-third" id="fromscratch" style="margin-left: -2rem; margin-top: 10rem;">
         <div class="content">
-          <video id="matting-video"  autoplay muted loop playsinline height="100%">
+          <video id="matting-video"  
+                 autoplay muted loop playsinline height="100%" 
+                 style="
+                   clip-path: inset(5px 5px 5px 5px);
+                   max-width: 100%;
+                 ">
             <source src="./static/videos/nameplate_animation.mp4" type="video/mp4">
           </video>
           <p class="has-text-centered">Generated nameplate design.</p>
       
-          <video id="second-video" class="video-border" autoplay muted loop playsinline height="100%" style="margin-top: 5rem;">
+          <video id="second-video" class="video-border" autoplay muted loop playsinline height="100%" 
+                 style="
+                   margin-top: 5rem;
+                   max-width: 100%;
+                 ">
             <source src="./static/videos/print_first.mp4" type="video/mp4">
           </video>
           <p class="has-text-centered">Generated Designs can be 3D printed.</p>
         </div>
       </div>
-      
     </div>
   </div>
 </section>
 
+<script>
+  function adjustVideoSize() {
+    if (window.innerWidth <= 768) { // Apply only for mobile
+      document.getElementById('matting-video').style.maxWidth = '50%';
+      document.getElementById('matting-video').style.display = 'block';
+      document.getElementById('matting-video').style.margin = 'auto';
 
+      document.getElementById('second-video').style.maxWidth = '50%';
+      document.getElementById('second-video').style.display = 'block';
+      document.getElementById('second-video').style.margin = 'auto';
+      document.getElementById('second-video').style.marginTop = '4rem'; // Increase spacing
+      document.getElementById('fromscratch').style.marginTop = '2rem'; // Default margin
+    } else { // Reset for larger screens
+      document.getElementById('matting-video').style.maxWidth = '100%';
+      document.getElementById('second-video').style.maxWidth = '100%';
+      document.getElementById('second-video').style.marginTop = '5rem'; // Default margin
 
+    }
+  }
+
+  window.addEventListener('resize', adjustVideoSize);
+  window.addEventListener('load', adjustVideoSize);
+</script>
 
 
 
