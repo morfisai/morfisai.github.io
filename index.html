@@ -125,7 +125,18 @@
                       </span>
                       <span>Video</span>
                     </a>
-                  </span>
+                    </span>
+                    <div class="is-size-5 publication-authors"></div>
+                    <div class="notification is-primary is-light" style="margin: 2rem auto; padding: 1rem; border-radius: 8px; max-width: 600px; text-align: center; border: 1px solid #ccc; color: rgb(0, 0, 0);">
+                      <span class="author-block">
+                      <strong>Morfis</strong> has been accepted as a 
+                      <a href="https://cvpr.thecvf.com/Conferences/2025/CallForDemos" class="has-text-link"></a>
+                      CVPR 2025 demo
+                      </a> 🎉
+                      </span>
+                    </div>
+                    </div>
+                  </div>
                   <!-- Code Link. -->
                 </div>
 
@@ -281,7 +292,7 @@
 </style>
 
 
-<section class="section" style="background-color: rgb(236, 236, 236);">
+<section class="section" style="background-color: white;">
   <div class="container is-max-desktop">
     <div class="columns is-centered is-vcentered is-variable is-8">
       <!-- Left column (larger). -->
@@ -364,64 +375,57 @@
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
 
-
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Work</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            The <span class="dnerf">Morfis</span> project is related to our work on generic CAD agents.
-            Refer to our paper <a href="https://arxiv.org/pdf/2412.13810">CAD-Assistant: Tool-Augmented VLLMs as Generic CAD Task Solvers? </a> presenting a general-purpose CAD
-            agent based on a Vision and Large Language Model (VLLM) planner and a
-             tool-augmentation paradigm using CADspecific modules. The proposed framework continuously assesses the impact of generated CAD commands on the evolving geometry, adapting subsequent actions accordingly.
-          </p> 
-        </br>
-      </br>
-    </br>
+<section class="section" style="margin-top: 0rem;">
+  <div class="container is-max-desktop" style="margin-top: 1rem;"></div>
+    <h2 class="title is-3 has-text-centered">Let's get in touch!</h2>
+    <form action="https://fabform.io/f/iNHGtaM" method="post" class="box" style="max-width: 600px; margin: 0 auto;">
+      <div class="field">
+        <label class="label" for="name">Name</label>
+        <div class="control">
+          <input class="input" type="text" id="name" name="name" placeholder="Enter your name" required>
         </div>
       </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
+      <div class="field">
+        <label class="label" for="email">Email</label>
+        <div class="control">
+          <input class="input" type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="message">Message</label>
+        <div class="control">
+          <textarea class="textarea" id="message" name="message" placeholder="Write your message here" required></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped is-justify-content-center">
+        <div class="control">
+          <button class="button is-primary is-rounded" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
 
-
-
-<footer class="footer">
+<footer class="footer" style="background-color: #ffffff; padding: 1.5rem 1.5rem;"></footer>
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
+      <!-- Centered Email -->
+      <div class="column has-text-centered">
+        <p class="is-size-5" style="margin-top: 1rem;">
+          <a href="mailto:contact@morfis.ai" class="has-text-dark">hello@morfis.ai</a>
+        </p>
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <!-- Right Logo -->
+      <div class="column has-text-right">
+        <figure class="image" style="max-width: 100px; margin: 0 auto;">
+          <img src="static/images/morfislogo.png" alt="Morfis Logo">
+        </figure>
       </div>
     </div>
   </div>
